@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails de l'annonce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>{{ annonce[1] }}</h1>
+    <p>{{ annonce[2] }}</p>
+    <p>Prix : {{ annonce[3] }} MRU</p>
+    <p>Date de publication : {{ annonce[4] }}</p>
+    <p>Photo : {{ annonce[5] }}</p>
+    
+    <h3>Photos :</h3>
+    {% for photo in photos %}
+    <img src="{{ photo[1] }}" alt="photo"><br>
+    {% endfor %}
+</body>
+</html>

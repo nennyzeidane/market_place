@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter une annonce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="POST">
+        <label for="titre">Titre :</label><br>
+        <input type="text" name="titre" required><br>
+        
+        <label for="description">Description :</label><br>
+        <textarea name="description" required></textarea><br>
+        
+        <label for="prix">Prix par MRU :</label><br>
+        <input type="number" name="prix" required min="0"><br>
+        
+        <label for="date_publication">Date de publication :</label><br>
+        <input type="date" name="date_publication" required><br><br>
+
+        <label for="Photo">Photo: </label>
+        <input type="file" name="Photo" required><br><br>
+        
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+</html>

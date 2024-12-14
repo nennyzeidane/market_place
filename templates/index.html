@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Annonces</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Liste des Annonces</h1>
+    {% for annonce in annonces %}
+    <div>
+        <h2><a href="{{ url_for('annonce_detail', id_annonce=annonce[0]) }}">{{ annonce[1] }}</a></h2>
+        <p>{{ annonce[2] }}</p>
+        <p>Prix : {{ annonce[3] }} €</p>
+    </div>
+    {% endfor %}
+    <a href="{{ url_for('add_announcement') }}">Ajouter une annonce</a>
+</body>
+</html>
